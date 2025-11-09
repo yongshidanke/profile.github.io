@@ -1,23 +1,293 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name — About</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历 | Your Name</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background: #f8f9fa;
+            color: #333;
+        }
+        
+        header {
+            background: white;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #000;
+        }
+        
+        nav a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: #666;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #000;
+        }
+        
+        .main-container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 3rem;
+            padding: 0 2rem;
+        }
+        
+        .sidebar {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+        
+        .avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+        
+        .sidebar h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .info-section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .info-label {
+            font-size: 0.85rem;
+            color: #999;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .info-text {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .info-text a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #4a90e2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+            font-size: 1.2rem;
+        }
+        
+        .social-links a:hover {
+            background: #2e5c8a;
+        }
+        
+        .content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .biography {
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+        
+        .biography p {
+            margin-bottom: 1rem;
+        }
+        
+        .biography a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+        
+        .biography a:hover {
+            text-decoration: underline;
+        }
+        
+        .recent-news {
+            margin-top: 2rem;
+        }
+        
+        .recent-news h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .news-item {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 3px solid #4a90e2;
+            background: #f8f9fa;
+        }
+        
+        .news-date {
+            color: #999;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .news-text {
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .news-text a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .main-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .sidebar {
+                position: static;
+            }
+            
+            nav a {
+                margin-left: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <main>
-    <h1>Hello, I'm <span class="highlight">Jiahui Ding</span>.</h1>
-    <p id="typewriter"></p>
-
-    <div class="links">
-      <a href="mailto:youremail@example.com">Email</a> /
-      <a href="https://github.com/yourgithub">GitHub</a> /
-      <a href="https://www.linkedin.com/in/yourlinkedin">LinkedIn</a>
+    <header>
+        <div class="nav-container">
+            <div class="logo">Your Name | 你的名字</div>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#publications">Publications</a>
+                <a href="#misc">Misc</a>
+                <a href="#contact">Contact</a>
+                <a href="#blog">Blog</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="main-container">
+        <aside class="sidebar">
+            <div class="avatar">👨‍💼</div>
+            <h2>Your Name</h2>
+            <p class="subtitle">Master's in Your Field<br>University Name</p>
+            
+            <div class="info-section">
+                <div class="info-label">EDUCATION</div>
+                <div class="info-text">
+                    <a href="#">Your University</a><br>
+                    Your Institute
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <div class="info-label">LAB/GROUP</div>
+                <div class="info-text">
+                    <a href="#">Your Lab Name</a>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="#" title="Email">✉️</a>
+                <a href="#" title="GitHub">🐙</a>
+                <a href="#" title="Telegram">✈️</a>
+                <a href="#" title="Twitter">𝕏</a>
+                <a href="#" title="Weibo">微</a>
+            </div>
+        </aside>
+        
+        <main class="content">
+            <h2>Biography</h2>
+            
+            <div class="biography">
+                <p>Hello! I am Your Name. During my studies, I was a member of the <a href="#">Your Lab Name</a> under the supervision of <a href="#">Prof. Your Advisor</a>.</p>
+                
+                <p>My research pursuits revolve around [your research area], with a primary focus on [specific focus]. My current work aims to discover and solve [your research problem]. My research results have received acknowledgements from well-known companies such as [Company A], [Company B], and [Company C].</p>
+                
+                <p>What's more, I am an active participant in [competitions/activities]. I am a member of <a href="#">Team Name</a>, a [type] team affiliated with [Organization], as well as <a href="#">Another Team</a>, an international team. My main skills are [Skill 1] and [Skill 2].</p>
+            </div>
+            
+            <section class="recent-news">
+                <h3>Recent News</h3>
+                <div class="news-item">
+                    <div class="news-date">[2024/XX]</div>
+                    <div class="news-text">
+                        My paper on [topic] got accepted by <a href="#">Conference/Journal Name</a>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">[2024/XX]</div>
+                    <div class="news-text">
+                        [Your achievement or news item]
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
-  </main>
-
-  <script src="js/script.js"></script>
 </body>
 </html>
