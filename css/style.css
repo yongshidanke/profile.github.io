@@ -21,8 +21,10 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
+
 .highlight {
   background: linear-gradient(120deg, #000 0%, #555 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
