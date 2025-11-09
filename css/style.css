@@ -1,0 +1,56 @@
+body {
+  background-color: #fdfdfd;
+  color: #111;
+  font-family: "Inter", "Helvetica Neue", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+main {
+  text-align: center;
+  max-width: 600px;
+  padding: 0 1rem;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.highlight {
+  background: linear-gradient(120deg, #000 0%, #555 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#typewriter {
+  font-size: 1.1rem;
+  color: #333;
+  min-height: 1.5em;
+  white-space: nowrap;
+  border-right: 2px solid #111;
+  overflow: hidden;
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.links {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
