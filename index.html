@@ -1,125 +1,72 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人简历 | 丁嘉惠</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ding Jiahui | 丁嘉惠</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div class="nav-container">
-            <div class="logo">JiaHui Ding | 丁嘉惠</div>
-            <nav>
-                <a href="#home">Home</a>
-            </nav>
-        </div>
-    </header>
-    
-    <div class="main-container">
-        <aside class="sidebar">
-            <div class="avatar">👨‍💼</div>
-            <h2>JiaHui Ding</h2>
-            
-            <div class="info-section">
-                <div class="info-label">EDUCATION</div>
-                <div class="info-text">
-                    <a href="#">ShanDong University</a><br>
-                    physics
-                </div>
-            </div>
-            
-            
-           <div class="social-links">
-                <a href="mailto:202300180210@mail.sdu.edu.cn" title="Email">✉️</a>
-                <a href="tel:18207158928" title="WeChat/Phone">💬</a>
-            </div>
-        </aside>
-        
-        <main class="content">
-            <h2>Biography</h2>
-            
-            <div class="biography">
-                <p>Hello! My name is Ding Jiahui. I am currently a third-year student majoring in Physics at the School of Physics, Shandong University. </p>
-
-                <p>I am a member of the Shandong University Physics Innovation and Entrepreneurship Alliance. As a team leader, I have led team members to achieve awards in various competitions, including the National College Mathematics Modeling Contest (CMMC) and National College Mathematics Competition(CMC).</p>
-                
-                <p>My research interests lie in optical imaging. Additionally, driven by my long-standing interest in brain cognitive mechanisms since childhood, I would be delighted if my research work could be combined with this field, such as optical neural imaging technology, brain-computer interface (BCI) technology, and optogenetics.</p>
-            </div>
-            
-            <section class="recent-news">
-                <h3>Research & Internship Experience</h3>
-                <div class="news-item">
-                    <div class="news-date">[2025/2--2025/4]</div>
-                    <div class="news-text">
-In early spring of my sophomore year, I joined the research group of Professor Ren Xiangxiang at the Frontier Physics Research Institute of Shandong University. Under the mentorship of a senior, I contributed to his bachelor's thesis on the polyphase filterbank (PFB), a digital signal processing algorithm that implements multi-channel filter decomposition and frequency band selection. I grasped the fundamental principle of this algorithm: decomposing the phases of sub-filters and then recovering the signal through FIR demodulation. However, when the project advanced to the hardware implementation stage, I realized my genuine interest lay in Fourier optics. Nevertheless, this experience significantly enhanced my ability to rapidly gather and filter information, particularly when entering unfamiliar fields. With my advisor's encouragement, I embarked on a journey pursuing my interest—turning vague concepts into clear and concrete actions.                    </div>
-                </div>
-                <div class="news-item">
-                    <div class="news-date">[2025/6--2025/8]</div>
-                    <div class="news-text">
-During the summer between my sophomore and junior years, I had the opportunity to intern at the Yangtze River Delta Physics Research Center, Chinese Academy of Sciences, under the supervision of Professor Xie Hao. My research focused on optical microscopy imaging and multimodal intelligent processing based on deep learning. Specifically, I reviewed several papers and gained a general understanding of various super-resolution imaging techniques, with emphasis on single-molecule localization microscopy (SMLM). I investigated methods to enhance detection rates and localization accuracy using deep learning tools, including DECODE and Universal Inverse Modelling of Point Spread Functions (PSF). I observed how elegant symmetrical U-Net architectures are constructed on convolutional foundations, and progressively applied frame analysis and temporal context analysis to U-Net to extract richer information. By reproducing different imaging modalities and PSF models across various data types using databases, I gained practical insights into the ingenuity of inverse modeling. These problem-solving strategies, combined with the picturesque environment of the research institute, left a deep impression on me.                    </div>
-                </div>
-            </section>
-
-            <section class="awards">
-                <h3>Awards & Honors</h3>
-                <div class="award-item">
-                    <div class="award-date">[2024-2025]</div>
-                    <div class="award-text">
-                        <strong>National College Mathematics Modeling Contest</strong> - Provincial Second Prize
-                        <strong>Shandong University Academic Excellence Scholarship</strong> 
-                        <strong>Science and Technology Innovation Excellence Scholarship</strong>
-                    </div>
-       
-                </div>
-
-                <div class="award-item">
-                    <div class="award-date">[2024]</div>
-                    <div class="award-text"></div>
-                        <strong>National College Mathematics Competition</strong> - Provincial Second Prize 
-                        <strong>Shandong Theoretical Physics Competition</strong> - Third Prize
-                    </div>
-                </div>
-
-
-            </section>
-
-            <section class="grades">
-                <h3>Academic Performance</h3>
-                <div class="grade-item">
-                    <div class="grade-label">GPA</div>
-                    <div class="grade-value">3.96/5.00</div>
-                    <button class="view-transcript" onclick="document.getElementById('transcriptModal').style.display='block'">View Transcript</button>
-                <div class="grade-item">
-                    <div class="grade-label">Ranking</div>
-                    <div class="grade-value">Top 10% in Major</div>
-                </div>
-            </section>
-
-            <!-- Transcript Modal -->
-            <div id="transcriptModal" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="document.getElementById('transcriptModal').style.display='none'">&times;</span>
-                    <h3>Course Transcript</h3>
-                    <img id="transcriptImage" src="grade image.png" alt="Course Transcript">
-                    <p style="margin-top: 1rem; font-size: 0.85rem; color: #999;">Please replace transcript.jpg with your actual transcript image file</p>
-                </div>
-            </div>
-
-            <section class="skills">
-                <h3>Other Skills</h3>
-                <div class="skills-grid">
-                    <div class="skill-tag">Programming Languages</div>
-                    <div class="skill-content">Python, MATLAB, C++</div>
-                </div>
-                <div class="skills-grid">
-                    <div class="skill-tag">Languages</div>
-                    <div class="skill-content">English (ILETS 7.0)</div>
-                </div>
-            </section>
-        </main>
+  <div class="container">
+    <div class="avatar">
+      <img src="avatar_circle.png" alt="Profile Photo">
     </div>
-    
-    <script src="script.js"></script>
+
+    <h1>Ding Jiahui</h1>
+    <h2>Undergraduate in Physics, Shandong University</h2>
+
+    <section class="intro">
+      <p>Hello! My name is Ding Jiahui. I am currently a third-year student majoring in Physics at the School of Physics, Shandong University.</p>
+      <p>I am a member of the Shandong University Physics Innovation and Entrepreneurship Alliance. As a team leader, I have led team members to achieve awards in various competitions, including the National College Mathematics Modeling Contest (CMMC) and National College Mathematics Competition (CMC).</p>
+      <p>My research interests lie in optical imaging. Additionally, driven by my long-standing interest in brain cognitive mechanisms since childhood, I would be delighted if my research work could be combined with this field, such as optical neural imaging technology, brain-computer interface (BCI) technology, and optogenetics.</p>
+    </section>
+
+    <section class="grades">
+      <h3>Academic Performance</h3>
+      <p><strong>GPA:</strong> 3.96 / 5.00</p>
+      <p><strong>Ranking:</strong> Top 10% in Major</p>
+      <p><a href="transcript.pdf" target="_blank">📄 View Full Transcript (PDF)</a></p>
+    </section>
+
+    <section>
+      <h3>Awards</h3>
+      <ul>
+        <li>2024-2025 National College Mathematical Modeling Contest – Provincial 2nd Prize</li>
+        <li>2024 National College Mathematics Contest – Provincial 2nd Prize</li>
+        <li>2024-2025 Shandong University Academic Excellence Scholarship</li>
+        <li>2025 Shandong University Science and Technology Innovation Excellence Scholarship</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Research & Internship Experience</h3>
+
+      <details>
+        <summary>[2025/2–2025/4] Shandong University – Digital Signal Processing</summary>
+        <p>In early spring of my sophomore year, I joined the research group of Professor Ren Xiangxiang at the Frontier Physics Research Institute of Shandong University. Under the mentorship of a senior, I contributed to his bachelor's thesis on the polyphase filterbank (PFB), a digital signal processing algorithm that implements multi-channel filter decomposition and frequency band selection. I grasped the fundamental principle of this algorithm: decomposing the phases of sub-filters and then recovering the signal through FIR demodulation. However, when the project advanced to the hardware implementation stage, I realized my genuine interest lay in Fourier optics. Nevertheless, this experience significantly enhanced my ability to rapidly gather and filter information, particularly when entering unfamiliar fields. With my advisor's encouragement, I embarked on a journey pursuing my interest—turning vague concepts into clear and concrete actions.</p>
+      </details>
+
+      <details>
+        <summary>[2025/6–2025/8] CAS Yangtze River Delta Physics Research Center – Optical Imaging</summary>
+        <p>During the summer between my sophomore and junior years, I had the opportunity to intern at the Yangtze River Delta Physics Research Center, Chinese Academy of Sciences, under the supervision of Professor Xie Hao. My research focused on optical microscopy imaging and multimodal intelligent processing based on deep learning. Specifically, I reviewed several papers and gained a general understanding of various super-resolution imaging techniques, with emphasis on single-molecule localization microscopy (SMLM). I investigated methods to enhance detection rates and localization accuracy using deep learning tools, including DECODE and Universal Inverse Modelling of Point Spread Functions (PSF). I observed how elegant symmetrical U-Net architectures are constructed on convolutional foundations, and progressively applied frame analysis and temporal context analysis to U-Net to extract richer information. By reproducing different imaging modalities and PSF models across various data types using databases, I gained practical insights into the ingenuity of inverse modeling. These problem-solving strategies, combined with the picturesque environment of the research institute, left a deep impression on me.</p>
+      </details>
+    </section>
+
+    <section>
+      <h3>Skills</h3>
+      <ul>
+        <li><strong>Programming Languages:</strong> Python, MATLAB, C++</li>
+        <li><strong>Languages:</strong> English (IELTS 7.0)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Contact</h3>
+      <ul class="contact-list">
+        <li><span>📧</span> 202300180210@mail.sdu.edu.cn</li>
+        <li><span>📱</span> 18207158928（微信同号）</li>
+      </ul>
+    </section>
+  </div>
 </body>
 </html>

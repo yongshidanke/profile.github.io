@@ -1,12 +1,11 @@
+/* ===== 基础重置 ===== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
   color: #222;
@@ -14,422 +13,141 @@ body {
   font-size: 16px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
-  padding: 80px 20px;
+  padding: 40px 20px;
 }
 
-header {
-    background: white;
-    border-bottom: 1px solid #e0e0e0;
-    padding: 1.5rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #000;
-}
-
-nav a {
-    margin-left: 2rem;
-    text-decoration: none;
-    color: #666;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #000;
-}
-
-.main-container {
-    max-width: 1200px;
-    margin: 3rem auto;
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 3rem;
-    padding: 0 2rem;
-}
-
-.sidebar {
-    position: sticky;
-    top: 100px;
-    height: fit-content;
-}
-
-.avatar {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 0 auto 1.5rem auto; /* 居中并留出下间距 */
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.avatar img {
+/* ===== 容器：居中卡片 ===== */
+.container {
+  max-width: 640px;
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* 确保头像不变形 */
-  display: block;
-}
-
-
-.sidebar h2 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.subtitle {
-    font-size: 0.9rem;
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-.info-section {
-    margin-bottom: 1.5rem;
-}
-
-.info-label {
-    font-size: 0.85rem;
-    color: #999;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-.info-text {
-    font-size: 0.9rem;
-    color: #666;
-}
-
-.info-text a {
-    color: #4a90e2;
-    text-decoration: none;
-}
-
-.social-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1.5rem;
-}
-
-.social-links a {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #4a90e2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-decoration: none;
-    transition: background 0.3s;
-    font-size: 1.2rem;
-}
-
-.social-links a:hover {
-    background: #2e5c8a;
-}
-
-.content {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-.content h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #f0f0f0;
-}
-
-.biography {
-    line-height: 1.8;
-    margin-bottom: 2rem;
-    font-size: 0.95rem;
-}
-
-.biography p {
-    margin-bottom: 1rem;
-}
-
-.biography a {
-    color: #4a90e2;
-    text-decoration: none;
-}
-
-.biography a:hover {
-    text-decoration: underline;
-}
-details {
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border-left: 3px solid #4a90e2;
-  background: #f8f9fa;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-summary {
-  font-weight: 600;
-  cursor: pointer;
-  color: #333;
-}
-summary:hover {
-  color: #0070f3;
-}
-details[open] {
-  background: #eef6ff;
-}
-
-/* Recent News / Research & Internship Section */
-.recent-news {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-.recent-news h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
-    color: #333;
-}
-
-.news-item {
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-left: 3px solid #4a90e2;
-    background: #f8f9fa;
-}
-
-.news-date {
-    color: #999;
-    font-size: 0.85rem;
-    margin-bottom: 0.5rem;
-}
-
-.news-text {
-    font-size: 0.9rem;
-    line-height: 1.6;
-}
-
-.news-text a {
-    color: #4a90e2;
-    text-decoration: none;
-}
-
-/* Awards Section */
-.awards {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-.awards h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
-    color: #333;
-}
-
-.award-item {
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-left: 3px solid #52c41a;
-    background: #f6ffed;
-}
-
-.award-date {
-    color: #999;
-    font-size: 0.85rem;
-    margin-bottom: 0.5rem;
-}
-
-.award-text {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: #333;
-}
-
-.award-text strong {
-    color: #1f1f1f;
-}
-
-/* Grades Section */
-.grades {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-.grades h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
-    color: #333;
-}
-
-.grade-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    margin-bottom: 0.8rem;
-    background: #f0f5ff;
-    border-radius: 4px;
-}
-
-.grade-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1;
-}
-
-.grade-label {
-    font-size: 0.9rem;
-    color: #666;
-    font-weight: 500;
-}
-
-.grade-value {
-    font-size: 1rem;
-    color: #4a90e2;
-    font-weight: 600;
-}
-
-.view-transcript {
-    padding: 0.5rem 1rem;
-    background: #4a90e2;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.85rem;
-    transition: background 0.3s;
-    margin-left: 1rem;
-}
-
-.view-transcript:hover {
-    background: #2e5c8a;
-}
-
-/* Skills Section */
-.skills {
-    margin-top: 2rem;
-}
-
-.skills h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
-    color: #333;
-}
-
-.skills-grid {
-    margin-bottom: 1.5rem;
-}
-
-.skill-tag {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #666;
-    margin-bottom: 0.5rem;
-}
-
-.skill-content {
-    font-size: 0.9rem;
-    color: #333;
-    line-height: 1.6;
-    padding: 0.8rem;
-    background: #f5f7fa;
-    border-radius: 4px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .main-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .sidebar {
-        position: static;
-    }
-    
-    nav a {
-        margin-left: 1rem;
-    }
-
-    .grade-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .grade-value {
-        margin-top: 0.5rem;
-    }
-}
-
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    animation: fadeIn 0.3s;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 3rem 2.5rem 2.5rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  animation: fadeIn 1s ease-out;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.modal-content {
-    background-color: white;
-    margin: 5% auto;
-    padding: 2rem;
-    border-radius: 8px;
-    max-width: 800px;
-    max-height: 80vh;
-    overflow-y: auto;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+/* ===== 标题 ===== */
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
 }
 
-.modal-content h3 {
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
+h2 {
+  font-size: 1.2rem;
+  font-weight: 350;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin: 0 0 2.5rem;
 }
 
-.modal-content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
+h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 1.5rem 0 1rem;
 }
 
-.close {
-    color: #999;
-    float: right;
-    font-size: 2rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s;
+/* ===== 头像 ===== */
+.avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 3rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.close:hover {
-    color: #333;
+/* ===== 段落 & 列表 ===== */
+p {
+  margin: 1.2rem 0;
+}
+ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* 列表卡片化 */
+section ul {
+  padding-left: 1.2rem;
+  margin-left: 0.5rem;
+  border-left: 1px solid #eaeaea;
+}
+
+/* ===== 链接 ===== */
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Research & Internship 可展开标题 ===== */
+details summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: #0070f3;
+  text-decoration: underline;
+  user-select: none;
+}
+details summary:hover {
+  color: #0056c7;
+}
+details[open] summary {
+  margin-bottom: 0.5rem;
+}
+details p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* ===== 联系方式 ===== */
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 0.6rem;
+}
+
+/* ===== 移动端微调 ===== */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  .container {
+    padding: 2rem 1.5rem;
+  }
 }
