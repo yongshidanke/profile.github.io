@@ -1,36 +1,23 @@
-const texts = [
-  "A physics student at Shandong University.",
-  "Interested in brain-computer interfaces.",
-  "Loves reading, movies, and science.",
-  "Building connections between mind and machine."
-];
+// 页面加载完成后的初始化
+document.addEventListener('DOMContentLoaded', function() {
+    // 你可以在这里添加页面交互效果
+    console.log('页面加载完成');
+});
 
-let i = 0;
-let j = 0;
-let currentText = "";
-let isDeleting = false;
+// 平滑滚动效果（可选）
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
 
-function type() {
-  currentText = texts[i];
-  const display = document.getElementById("typewriter");
-
-  if (!isDeleting && j < currentText.length) {
-    display.textContent = currentText.substring(0, j + 1);
-    j++;
-    setTimeout(type, 80);
-  } else if (isDeleting && j > 0) {
-    display.textContent = currentText.substring(0, j - 1);
-    j--;
-    setTimeout(type, 40);
-  } else {
-    if (!isDeleting) {
-      setTimeout(() => (isDeleting = true, type()), 1200);
-    } else {
-      isDeleting = false;
-      i = (i + 1) % texts.length;
-      setTimeout(type, 400);
-    }
-  }
-}
-
-type();
+// 你可以在这里添加其他交互功能，比如：
+// - 动画效果
+// - 点击事件
+// - 数据动态加载等
