@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ding Jiahui | 丁嘉惠</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
+      color: #222;
+      line-height: 1.8;
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 680px;
+      width: 100%;
+      animation: fadeIn 1s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin: 0 0 0.5rem 0;
+    }
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #666;
+      margin: 0 0 2rem 0;
+    }
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      color: #222;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    a {
+      color: #0070f3;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      flex-shrink: 0;
+    }
+    p {
+      margin: 1rem 0;
+    }
+    ul {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    details {
+      margin-bottom: 1rem;
+      border-left: 3px solid #4a90e2;
+      padding-left: 1rem;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 500;
+      color: #0070f3;
+      user-select: none;
+    }
+    summary:hover {
+      text-decoration: underline;
+    }
+    details[open] summary {
+      margin-bottom: 0.5rem;
+    }
+    details p {
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+      color: #444;
+    }
+    .contact-list {
+      list-style: none;
+      padding: 0;
+    }
+    .contact-list li {
+      padding: 0.3rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="avatar">
+      <img src="avatar_circle.png" alt="Profile Photo">
+    </div>
+
+    <h1>Ding Jiahui</h1>
+    <h2>Undergraduate in Physics, Shandong University</h2>
+    
+    <section class="intro">
+      <p>Hello! My name is Ding Jiahui. I am currently a third-year student majoring in Physics at the School of Physics, Shandong University.</p>
+
+      <p>I am a member of the Shandong University Physics Innovation and Entrepreneurship Alliance. As a team leader, I have led team members to achieve awards in various competitions, including the National College Mathematics Modeling Contest (CMMC) and National College Mathematics Competition (CMC).</p>
+                
+      <p>My research interests lie in optical imaging. Additionally, driven by my long-standing interest in brain cognitive mechanisms since childhood, I would be delighted if my research work could be combined with this field, such as optical neural imaging technology, brain-computer interface (BCI) technology, and optogenetics.</p>
+    </section>
+
+    <section class="grades">
+      <h3>Academic Performance</h3>
+      <p><strong>GPA:</strong> 3.96 / 5.00</p>
+      <p><strong>Ranking:</strong> Top 10% in Major</p>
+      <p><a href="transcript.pdf" target="_blank">📄 View Full Transcript (PDF)</a></p>
+    </section>
+
+    <section>
+      <h3>Awards</h3>
+      <ul>
+        <li>2024-2025 National College Mathematical Modeling Contest – Provincial 2nd Prize</li>
+        <li>2024 National College Mathematics Contest – Provincial 2nd Prize</li>
+        <li>2024-2025 Shandong University Academic Excellence Scholarship</li>
+        <li>2025 Shandong University Science and Technology Innovation Excellence Scholarship</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Research & Internship Experience</h3>
+
+      <details>
+        <summary>[2025/2–2025/4] Shandong University – Digital Signal Processing</summary>
+        <p>In early spring of my sophomore year, I joined the research group of Professor Ren Xiangxiang at the Frontier Physics Research Institute of Shandong University. Under the mentorship of a senior, I contributed to his bachelor's thesis on the polyphase filterbank (PFB), a digital signal processing algorithm that implements multi-channel filter decomposition and frequency band selection. I grasped the fundamental principle of this algorithm: decomposing the phases of sub-filters and then recovering the signal through FIR demodulation. However, when the project advanced to the hardware implementation stage, I realized my genuine interest lay in Fourier optics. Nevertheless, this experience significantly enhanced my ability to rapidly gather and filter information, particularly when entering unfamiliar fields. With my advisor's encouragement, I embarked on a journey pursuing my interest—turning vague concepts into clear and concrete actions.</p>
+      </details>
+
+      <details>
+        <summary>[2025/6–2025/8] CAS Yangtze River Delta Physics Research Center – Optical Imaging</summary>
+        <p>During the summer between my sophomore and junior years, I had the opportunity to intern at the Yangtze River Delta Physics Research Center, Chinese Academy of Sciences, under the supervision of Professor Xie Hao. My research focused on optical microscopy imaging and multimodal intelligent processing based on deep learning. Specifically, I reviewed several papers and gained a general understanding of various super-resolution imaging techniques, with emphasis on single-molecule localization microscopy (SMLM). I investigated methods to enhance detection rates and localization accuracy using deep learning tools, including DECODE and Universal Inverse Modelling of Point Spread Functions (PSF). I observed how elegant symmetrical U-Net architectures are constructed on convolutional foundations, and progressively applied frame analysis and temporal context analysis to U-Net to extract richer information. By reproducing different imaging modalities and PSF models across various data types using databases, I gained practical insights into the ingenuity of inverse modeling. These problem-solving strategies, combined with the picturesque environment of the research institute, left a deep impression on me.</p>
+      </details>
+    </section>
+
+    <section>
+      <h3>Skills</h3>
+      <ul>
+        <li><strong>Programming Languages:</strong> Python, MATLAB, C++</li>
+        <li><strong>Languages:</strong> English (IELTS 7.0)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Contact</h3>
+      <ul class="contact-list">
+        <li><strong>Email:</strong> 202300180210@mail.sdu.edu.cn</li>
+        <li><strong>Phone/WeChat:</strong> 18207158928</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
