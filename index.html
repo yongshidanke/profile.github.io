@@ -5,11 +5,166 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ding Jiahui | 丁嘉惠</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+/* ===== 基础重置 ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
+  color: #222;
+  line-height: 1.8;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* ===== 容器：居中卡片 ===== */
+.container {
+  max-width: 640px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 3rem 2.5rem 2.5rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== 标题 ===== */
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 350;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin: 0 0 2.5rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 1.5rem 0 1rem;
+}
+
+/* ===== 头像 ===== */
+.avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 3rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== 段落 & 列表 ===== */
+p {
+  margin: 1.2rem 0;
+}
+ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* 列表卡片化 */
+section ul {
+  padding-left: 1.2rem;
+  margin-left: 0.5rem;
+  border-left: 1px solid #eaeaea;
+}
+
+/* ===== 链接 ===== */
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Research & Internship 可展开标题 ===== */
+details summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: #0070f3;
+  text-decoration: underline;
+  user-select: none;
+}
+details summary:hover {
+  color: #0056c7;
+}
+details[open] summary {
+  margin-bottom: 0.5rem;
+}
+details p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* ===== 联系方式 ===== */
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 0.6rem;
+}
+
+/* ===== 移动端微调 ===== */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  .container {
+    padding: 2rem 1.5rem;
+  }
+}
+</style>
 </head>
 <body>
   <div class="container">
     <div class="avatar">
-      <img src="avatar_circle.png" alt="Profile Photo">
+    <img src="https://s21.ax1x.com/2025/11/11/pZCC9YD.png" alt="Profile Photo">
     </div>
 
     <h1>Ding Jiahui</h1>
@@ -25,7 +180,7 @@
       <h3>Academic Performance</h3>
       <p><strong>GPA:</strong> 3.96 / 5.00</p>
       <p><strong>Ranking:</strong> Top 10% in Major</p>
-      <p><a href="transcript.pdf" target="_blank">📄 View Full Transcript (PDF)</a></p>
+      <p><a href="https://s21.ax1x.com/2025/11/11/pZCCAOI.png" target="_blank">📄 View Full Transcript (PDF)</a></p>
     </section>
 
     <section>
